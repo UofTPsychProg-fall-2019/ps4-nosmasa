@@ -1,4 +1,6 @@
-Study phase:
+My experiment is the Stroop Task designed for the geriatric population (i.e. larger font sizes and longer presentation of fixation points).  Stimuli for this experiment will pertain three different colours, where there is a mismatch between the name of a colour and the colour it is printed on (i.e. the word “red” is printed in blue ink) and a fixation point that will arise between stimuli colour-word presentations. The colour-word will be presented on the screen and the participant will have X amount of time to answer with the colour the word is printed in. To get the correct answer you must say the colour that the word is printed in, not what the word says. There will be 3 blocks with 18 trails. 
+
+Geriatric Stroop Task PseudoCode:
 
 response_keys = ['r','g','b']
 r is correct if = 'redred', 'greenred', 'bluered' 
