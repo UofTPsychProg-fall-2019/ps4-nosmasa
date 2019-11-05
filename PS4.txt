@@ -52,5 +52,6 @@ delay until a key is pressed #stimuli presentation remains on the screen until a
 
 calculate number of correct responses 
 calculate number of incorrect response 
-calculate reaction time for each correct response   
+calculate reaction time for correct conrguent reaction times
+calculate reaction time for correct incongruent reaction times    
   
