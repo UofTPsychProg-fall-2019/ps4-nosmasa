@@ -1,6 +1,11 @@
-My experiment is the Stroop Task designed for the geriatric population (i.e. larger font sizes and longer presentation of fixation points).  Stimuli for this experiment will pertain three different colours, where there is a mismatch between the name of a colour and the colour it is printed on (i.e. the word “red” is printed in blue ink) and a fixation point that will arise between stimuli colour-word presentations. The colour-word will be presented on the screen and the participant will have X amount of time to answer with the colour the word is printed in. To get the correct answer you must say the colour that the word is printed in, not what the word says. There will be 3 blocks with 18 trails. 
+My experiment is the Stroop Task designed for the geriatric population (i.e. larger font sizes and longer presentation of 
+fixation points).Stimuli for this experiment will pertain three different colours, where there is a mismatch between the name
+of a colour and the colour it is printed on (i.e. the word “red” is printed in blue ink) and a fixation point that will arise
+between stimuli colour-word presentations. The colour-word will be presented on the screen and the participant will have unlimited amont of time to answer. To get the correct answer you must hit the designated keyboard key of the colour that the word is printed in, not what the word says (i.e. red =r, green=g, blue = b). There will be 3 blocks with 18 trails. 
 
 Geriatric Stroop Task PseudoCode:
+
+font arial 40
 
 response_keys = ['r','g','b']
 r is correct if = 'redred', 'greenred', 'bluered' 
@@ -19,7 +24,7 @@ stim_mistake = read+directory('mistake/*png')
 
 for block in range(3) #there are 3 blocks with 18 trials
 	trials = [18]
-print out('stim_fixation') between every
+print out('stim_fixation') at the beginning and after every feedback presentation
 	shuffle('stim_congruent','stim_incongruent')
 	display('stim_correct') if correct response
 	else 
@@ -30,12 +35,12 @@ subject = input()
 
 display('stim_fixation') 
 delay 6000 #6 second fixation point presentation 
-print out shuffled list of stimuli #18 different stimuli combinations, 6 congruent and 12 incongruent 
+print out shuffled list of stim_congruent and stim_incongruent #18 different stimuli combinations, 6 congruent and 12 incongruent 
 delay until a key is pressed #stimuli presentation remains on the screen until a key is pressed 
-  if STATUS == CORRECT
+  if correct key is hit then
     display('stim_correct') #feedback
   else
-  if STATUS != CORRECT  
+  if incorect key is hit then   
     display('stim_mistake') #feedback
   delay 6000 #6 second feedback presentation 
  end 
