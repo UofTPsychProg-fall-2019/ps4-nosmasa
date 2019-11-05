@@ -1,0 +1,49 @@
+Study phase:
+
+response_keys = ['r','g','b']
+r is correct if = 'redred', 'greenred', 'bluered' 
+g is correct if = 'greengreen', 'redgreen', 'bluegreen'
+b is correct if = 'blueblue', 'greenblue', 'redblue'
+
+#congruent stimuli = redred, blueblue, greengreen 
+#incongruent stimuli = redgreen, redblue, greenred, greenblue, bluered, bluegreen 
+
+
+stim_congruent = read_directory('redred/*png'or 'greengreen/*png' or 'blueblue/*png') #reading in all congruent images
+stim_incongruent = read_directory('redgreen/*png' or 'redblue/*png' or 'greenred/*png' or 'greenblue/*png' or 'bluered/*png' or 'bluegreen/*png')
+stim_fixation = read_directory('fixpoint/*png')
+stim_correct = read_directory('correct/*png')
+stim_mistake = read+directory('mistake/*png')
+
+for block in range(3) #there are 3 blocks with 18 trials
+	trials = [18]
+print out('stim_fixation') between every
+	shuffle('stim_congruent','stim_incongruent')
+	display('stim_correct') if correct response
+	else 
+	display('stim_mistake')if incorrect response 
+	2 minute break between 3 trials
+
+subject = input()
+
+display('stim_fixation') 
+delay 6000 #6 second fixation point presentation 
+print out shuffled list of stimuli #18 different stimuli combinations, 6 congruent and 12 incongruent 
+delay until a key is pressed #stimuli presentation remains on the screen until a key is pressed 
+  if STATUS == CORRECT
+    display('stim_correct') #feedback
+  else
+  if STATUS != CORRECT  
+    display('stim_mistake') #feedback
+  delay 6000 #6 second feedback presentation 
+ end 
+
+ for trials in trails
+	resonse, rt = record_keyboard responses(response_keys) #collect responses during task
+	display_fixpoint(6000-trail[]) #each trial 6s fixation point between 
+	#after each trial save (response key, rt and trial number)
+
+calculate number of correct responses 
+calculate number of incorrect response 
+calculate reaction time for each correct response   
+  
