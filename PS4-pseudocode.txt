@@ -1,0 +1,57 @@
+My experiment is the Stroop Task designed for the geriatric population (i.e. larger font sizes and longer presentation of 
+fixation points).Stimuli for this experiment will pertain three different colours, where there is a mismatch between the name
+of a colour and the colour it is printed on (i.e. the word “red” is printed in blue ink) and a fixation point that will arise
+between stimuli colour-word presentations. The colour-word will be presented on the screen and the participant will have unlimited amont of time to answer. To get the correct answer you must hit the designated keyboard key of the colour that the word is printed in, not what the word says (i.e. red =r, green=g, blue = b). There will be 3 blocks with 18 trails. 
+
+Geriatric Stroop Task PseudoCode:
+
+font arial 40
+
+response_keys = ['r','g','b']
+r is correct if = 'redred', 'greenred', 'bluered' 
+g is correct if = 'greengreen', 'redgreen', 'bluegreen'
+b is correct if = 'blueblue', 'greenblue', 'redblue'
+
+#congruent stimuli = redred, blueblue, greengreen 
+#incongruent stimuli = redgreen, redblue, greenred, greenblue, bluered, bluegreen 
+
+
+stim_congruent = read_directory('redred/*png'or 'greengreen/*png' or 'blueblue/*png') #reading in all congruent images
+stim_incongruent = read_directory('redgreen/*png' or 'redblue/*png' or 'greenred/*png' or 'greenblue/*png' or 'bluered/*png' or 'bluegreen/*png')
+stim_fixation = read_directory('fixpoint/*png')
+stim_correct = read_directory('correct/*png')
+stim_mistake = read+directory('mistake/*png')
+
+for block in range(3) #there are 3 blocks with 18 trials
+	trials = [18]
+print out('stim_fixation') at the beginning and after every feedback presentation
+	shuffle('stim_congruent','stim_incongruent')
+	display('stim_correct') if correct response
+	else 
+	display('stim_mistake')if incorrect response 
+	2 minute break between 3 trials
+
+subject = input()
+
+display('stim_fixation') 
+delay 6000 #6 second fixation point presentation 
+print out shuffled list of stim_congruent and stim_incongruent #18 different stimuli combinations, 6 congruent and 12 incongruent 
+delay until a key is pressed #stimuli presentation remains on the screen until a key is pressed 
+  if correct key is hit then
+    display('stim_correct') #feedback
+  else
+  if incorect key is hit then   
+    display('stim_mistake') #feedback
+  delay 6000 #6 second feedback presentation 
+ end 
+
+ for trials in trails
+	resonse, rt = record_keyboard responses(response_keys) #collect responses during task
+	display_fixpoint(6000-trail[]) #each trial 6s fixation point between 
+	#after each trial save (response key, rt and trial number)
+
+calculate number of correct responses 
+calculate number of incorrect response 
+calculate reaction time for correct conrguent reaction times
+calculate reaction time for correct incongruent reaction times    
+  
